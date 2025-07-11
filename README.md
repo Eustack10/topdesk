@@ -14,7 +14,7 @@ Clone the repo and install dependencies:
 
 ```bash
 git clone https://github.com/eustack10/topdesk.git
-cd your-repo-name
+cd topdesk
 npm install
 
 npm run dev     # if using Vite
