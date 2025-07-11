@@ -1,0 +1,157 @@
+.black{
+  height: 55px;
+  background-color: black;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+  background-color: rgb(63,63,63);
+  display: flex;
+  padding: 0px 25px;
+  gap:10px;
+  justify-content: space-between;
+}
+nav .link,
+nav .href{
+  font-size: 23px;
+  padding:13px 10px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+nav .link:hover{
+  background-color: #8DC63F;
+  cursor: pointer;
+}
+.sublink{
+  display: none;
+}
+nav .link:hover .sublink{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  margin-left: -20px;
+  margin-top: 13px;
+  z-index: 99;
+}
+nav .link:hover .sublink .href{
+  background-color: rgb(63,63,63);
+  padding: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+nav .link:hover .sublink .href:hover{
+  
+  background-color: #8DC63F;
+  cursor: pointer;
+}
+nav .active,
+nav .href.active{
+  font-size: 23px;
+  padding:13px 10px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  background-color: #8DC63F;
+  cursor: pointer;
+}
+
+.area{
+  padding: 25px 60px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.area .content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+.area .content .card{
+  width: fit-content;
+  width: 20%;
+  position: relative;
+  overflow: hidden;
+}
+.area .content .card img{
+  width: 100%;
+  border-radius: 15px;
+}
+.area .content .card .ribbon{
+  content: "";
+  display: flex;
+  position: absolute;
+  background-color: #8DC63F;
+  right: -35px;
+  top: 15px;
+  transform: rotate(45deg);
+  width: fit-content;
+  padding: 5px 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+}
+.area .content .card button{
+  position: absolute;
+  border: 1px solid red;
+  bottom: -100px;
+  left:0;
+  width: 100%;
+  padding:10px 10px;
+  background-color: #8DC63F;
+  color: #fff;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.area .content .card:hover button{
+  bottom: 0px;
+  border-radius: 0 0 15px 15px;
+}
+
+.jackpot{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+.jackpot .content{
+  display: flex;
+  justify-content: flex-start;
+  background-color: #373737;
+  padding: 20px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+  }
+  .area{
+    padding: 0;
+  }
+  .area .content{
+    padding:20px 0;
+  }
+  .area .content .card{
+    width: 40%;
+  }
+  .jackpot .content{
+    padding: 20px;
+  }
+
+}
