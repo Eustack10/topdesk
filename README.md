@@ -21,10 +21,8 @@ npm run dev     # if using Vite
 # or
 npm start       # if using Create React App
 
-<pre>
 /src
   ├── App.jsx
   ├── main.jsx
   ├── components/
   ├── pages/
-</pre>
